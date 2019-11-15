@@ -1,10 +1,10 @@
-package com.sky.mychat;
+package com.sky.websocket;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MychatApplicationTests {
+class WebsocketApplicationTests {
 
     @Test
     void contextLoads() {
