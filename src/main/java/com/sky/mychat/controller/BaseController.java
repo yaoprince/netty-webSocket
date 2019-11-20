@@ -9,17 +9,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @date 2019/11/17 15:17
  */
 public abstract class BaseController {
-    /**
-     * 响应状态:成功
-     */
-    protected static final int ok = 2000;
 
     @ExceptionHandler({ServiceException.class})
     public JsonResult<Void> handleException(Throwable e) {
-        JsonResult<Void> jr = new JsonResult<>();
         if (e instanceof ServiceException) {
-            jr.setState(4000);
+            return JsonResult.failed(((ServiceException) e).getErrorCode());
         }
-        return jr;
+        e.printStackTrace();
+        return JsonResult.failed();
     }
 }

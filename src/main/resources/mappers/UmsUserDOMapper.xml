@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sky.mychat.mapper.UmsUserDoMapper">
-    <resultMap id="BaseResultMap" type="com.sky.mychat.entiry.UmsUserDO">
+    <resultMap id="BaseResultMap" type="com.sky.mychat.entiry.UmsUserDo">
         <!--@mbg.generated-->
         <!--@Table ums_user-->
         <id column="id" jdbcType="INTEGER" property="id"/>
@@ -35,7 +35,7 @@
         delete from ums_user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.sky.mychat.entiry.UmsUserDO">
+    <insert id="insert" parameterType="com.sky.mychat.entiry.UmsUserDo">
         <!--@mbg.generated-->
         insert into ums_user (id, username, `password`,
         avatar, user_level, user_type,
@@ -48,7 +48,7 @@
         #{tel,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
         #{modifiedTime,jdbcType=TIMESTAMP})
     </insert>
-    <insert id="insertSelective" parameterType="com.sky.mychat.entiry.UmsUserDO">
+    <insert id="insertSelective" parameterType="com.sky.mychat.entiry.UmsUserDo">
         <!--@mbg.generated-->
         insert into ums_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -134,7 +134,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.sky.mychat.entiry.UmsUserDO">
+    <update id="updateByPrimaryKeySelective" parameterType="com.sky.mychat.entiry.UmsUserDo">
         <!--@mbg.generated-->
         update ums_user
         <set>
@@ -177,7 +177,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.sky.mychat.entiry.UmsUserDO">
+    <update id="updateByPrimaryKey" parameterType="com.sky.mychat.entiry.UmsUserDo">
         <!--@mbg.generated-->
         update ums_user
         set username = #{username,jdbcType=VARCHAR},
@@ -201,5 +201,11 @@
         <include refid="Base_Column_List"/>
         from ums_user
         where username=#{username,jdbcType=VARCHAR}
+    </select>
+    <select id="getUserByIdList" resultType="com.sky.mychat.dto.UserInfo">
+        select id userId,username,avatar from ums_user where id in
+        <foreach collection="list" item="userId" open="(" close=")" separator=",">
+            #{userId}
+        </foreach>
     </select>
 </mapper>

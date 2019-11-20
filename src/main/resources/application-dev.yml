@@ -21,8 +21,6 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       filters: stat,wall
       aop-patterns: com.sky.mychat.server.*
-
-
       web-stat-filter:
         enabled: true
         url-pattern: /*
@@ -50,3 +48,4 @@ logging:
 webSocket:
   server:
     port: 9012
+    heartbeat: 5

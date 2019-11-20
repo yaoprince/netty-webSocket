@@ -6,27 +6,32 @@ import lombok.Data;
 
 /**
  * @author tiankong
- * @date 2019/11/17 16:06
+ * @date 2019/11/19 19:59
  */
 @Data
-public class ChatGroupDO implements Serializable {
+public class ChatGroupDo implements Serializable {
     private Integer id;
 
-    private String name;
+    private String groupName;
 
     private String icon;
 
     private String description;
 
     /**
-    * 群类型
-    */
+     * 群类型
+     */
     private Byte type;
 
     /**
-    * 加群人数最大值
-    */
+     * 加群人数最大值
+     */
     private Short maxNumberOfPeople;
+
+    /**
+     * 是否保存数据到数据库
+     */
+    private Boolean saveDb;
 
     private Date createTime;
 

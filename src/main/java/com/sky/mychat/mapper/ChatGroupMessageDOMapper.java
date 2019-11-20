@@ -1,6 +1,6 @@
 package com.sky.mychat.mapper;
 
-import com.sky.mychat.entiry.ChatGroupMessageDO;
+import com.sky.mychat.entiry.ChatGroupMessageDo;
 
 /**
  * @author tiankong
@@ -9,13 +9,13 @@ import com.sky.mychat.entiry.ChatGroupMessageDO;
 public interface ChatGroupMessageDOMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(ChatGroupMessageDO record);
+    int insert(ChatGroupMessageDo record);
 
-    int insertSelective(ChatGroupMessageDO record);
+    int insertSelective(ChatGroupMessageDo record);
 
-    ChatGroupMessageDO selectByPrimaryKey(Integer id);
+    ChatGroupMessageDo selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(ChatGroupMessageDO record);
+    int updateByPrimaryKeySelective(ChatGroupMessageDo record);
 
-    int updateByPrimaryKey(ChatGroupMessageDO record);
+    int updateByPrimaryKey(ChatGroupMessageDo record);
 }

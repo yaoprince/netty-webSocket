@@ -1,6 +1,10 @@
 package com.sky.mychat.mapper;
 
-import com.sky.mychat.entiry.ChatRoomDO;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+import com.sky.mychat.entiry.ChatRoomDo;
 
 /**
  * @author tiankong
@@ -9,13 +13,17 @@ import com.sky.mychat.entiry.ChatRoomDO;
 public interface ChatRoomDOMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(ChatRoomDO record);
+    int insert(ChatRoomDo record);
 
-    int insertSelective(ChatRoomDO record);
+    int insertSelective(ChatRoomDo record);
 
-    ChatRoomDO selectByPrimaryKey(Integer id);
+    ChatRoomDo selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(ChatRoomDO record);
+    int updateByPrimaryKeySelective(ChatRoomDo record);
 
-    int updateByPrimaryKey(ChatRoomDO record);
+    int updateByPrimaryKey(ChatRoomDo record);
+
+    List<ChatRoomDo> selectByAll(ChatRoomDo chatRoomDo);
+
+
 }

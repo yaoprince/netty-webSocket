@@ -1,6 +1,6 @@
 package com.sky.mychat.mapper;
 
-import com.sky.mychat.entiry.ChatRoomMessageDO;
+import com.sky.mychat.entiry.ChatRoomMessageDo;
 
 /**
  * @author tiankong
@@ -9,13 +9,13 @@ import com.sky.mychat.entiry.ChatRoomMessageDO;
 public interface ChatRoomMessageDOMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(ChatRoomMessageDO record);
+    int insert(ChatRoomMessageDo record);
 
-    int insertSelective(ChatRoomMessageDO record);
+    int insertSelective(ChatRoomMessageDo record);
 
-    ChatRoomMessageDO selectByPrimaryKey(Integer id);
+    ChatRoomMessageDo selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(ChatRoomMessageDO record);
+    int updateByPrimaryKeySelective(ChatRoomMessageDo record);
 
-    int updateByPrimaryKey(ChatRoomMessageDO record);
+    int updateByPrimaryKey(ChatRoomMessageDo record);
 }

@@ -1,6 +1,6 @@
 package com.sky.mychat.bo;
 
-import com.sky.mychat.entiry.UmsUserDO;
+import com.sky.mychat.entiry.UmsUserDo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -11,9 +11,9 @@ import java.util.Collection;
  * @date 2019/11/17 16:07
  */
 public class CurrentUserDetails implements UserDetails {
-    private UmsUserDO user;
+    private UmsUserDo user;
 
-    public CurrentUserDetails(UmsUserDO user) {
+    public CurrentUserDetails(UmsUserDo user) {
         this.user = user;
     }
 

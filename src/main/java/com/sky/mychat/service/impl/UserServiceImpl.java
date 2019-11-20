@@ -1,6 +1,6 @@
 package com.sky.mychat.service.impl;
 
-import com.sky.mychat.entiry.UmsUserDO;
+import com.sky.mychat.entiry.UmsUserDo;
 import com.sky.mychat.mapper.UmsUserDoMapper;
 import com.sky.mychat.service.UserService;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     private UmsUserDoMapper userMapper;
 
     @Override
-    public UmsUserDO getByUsername(String username) {
+    public UmsUserDo getByUsername(String username) {
         return userMapper.selectOneByUsername(username);
     }
 }

@@ -1,6 +1,6 @@
 package com.sky.mychat.service;
 
-import com.sky.mychat.entiry.UmsUserDO;
+import com.sky.mychat.entiry.UmsUserDo;
 
 /**
  * @author tiankong
@@ -13,5 +13,5 @@ public interface UserService {
      * @param username 用户名
      * @return 用户
      */
-    UmsUserDO getByUsername(String username);
+    UmsUserDo getByUsername(String username);
 }
