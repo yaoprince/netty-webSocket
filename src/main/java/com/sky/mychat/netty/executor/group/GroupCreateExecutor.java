@@ -59,6 +59,7 @@ public class GroupCreateExecutor extends ChatExecutor {
         userSet.add(channel.attr(Attributes.SESSION).get().getUserId());
         ChatGroupDo groupDo = new ChatGroupDo();
         groupDo.setCreateTime(date);
+        groupDo.setModifiedTime(date);
         groupDo.setGroupName(groupName);
         groupDo.setIcon("/test.png");
         groupDo.setMaxNumberOfPeople((short) 200);

@@ -24,12 +24,12 @@ public abstract class Executor extends BaseHandler {
      */
     public abstract void execute(JSONObject param, Channel channel);
 
-    /**
-     * 获取命令
-     *
-     * @return executor
-     */
-    public Byte getCommand() {
-        return command;
-    }
+//    /**
+//     * 获取命令
+//     *
+//     * @return executor
+//     */
+//    public Byte getCommand() {
+//        return command;
+//    }
 }
