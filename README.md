@@ -128,43 +128,52 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
 ```
 ### 心跳检测
 请求
-
+```
 {"command":0}
-
+```
 响应
 
+```
 {
   "message":"服务端已收到你的心跳请求",
   "state":2000,
   "type":0
 }
+```
 ### 登录 绑定用户Channel
 请求
 
+```
 {
   "userId":1,
   "command":1
 }
 
+```
 响应
 
+```
 {
   "message":"您已连接成功!",
   "state":2000,
   "type":1
 }
+```
 
 ### 单聊
 请求
 
+```
 {
   "toUserId":"2",
   "content":"hello",
   "command":2
 }
+```
 
 响应
 
+```
 {
   "data":{
     "content":"hello",
@@ -177,31 +186,39 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "type":2
 }
 
+```
 ### 创建群聊
 请求
 
+```
 {
   "groupName":"圆圆的群聊",
   "userIds":"2",
   "command":4
 }
+```
 响应
 
+```
 {
   "message":"创建群组成功",
   "state":2000,
   "type":4
 }
+```
 ### 查看在线群成员
 请求
 
+```
 {
   "groupId":14,
   "command":5
 }
+```
 
 响应
 
+```
 {
   "data":[
     {
@@ -219,15 +236,19 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "state":2000,
   "type":0
 }
+```
 ### 查看群所有成员
 请求
 
+```
 {
   "groupId":14,
   "command":6
 }
+```
 响应
 
+```
 {
   "data":[
     {
@@ -250,48 +271,60 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "state":2000,
   "type":0
 }
+```
 ### 退群
 请求
 
+```
 {
     "groupId":14,
     "userIds":"3",  
     "command":8
 }
+```
 > 多个用户userIds 用逗号隔开
 
 响应
 
+```
 {
   "message":"success",
   "state":2000,
   "type":8
-
+}
+```
 ### 加群
 请求
 
+```
 {
   "groupId":14,
   "userIds":"3",
   "command":7
 }
+```
 响应
 
+```
 {
   "message":"success",
   "state":2000,
   "type":7
 }
+```
 ### 群聊
 请求
 
+```
 {
   "groupId":14,
   "content":"大家好!",
   "command":3
 }
+```
 响应
 
+```
 {
   "data":{
     "content":"大家好!",
@@ -304,9 +337,11 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "type":3
 }
 
+```
 ### 创建房间
 请求
 
+```
 {
   "command":9,
   "name":"圆圆的房间",
@@ -314,39 +349,49 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "room_type":1
 }
 
+```
 响应
 
+```
 {
   "message":"创建房间成功",
   "state":2000,
   "type":9
 }
+```
 ### 进入房间
 请求
 
+```
 {
   "command":10,
   "room_id":2
 }
+```
 
 响应
 
+```
 {
   "message":"success",
   "state":2000,
   "type":10
 }
+```
 
 ### 查看房间所有用户
 请求
 
+```
 {
   "command":11,
   "room_id":2
 }
+```
 
 响应
 
+```
 {
   "data":[
     {
@@ -359,17 +404,21 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "state":2000,
   "type":0
 }
+```
 ### 房间聊天
 请求
 
+```
 {
   "command":12,
   "room_id":2,
   "content":"房间里的朋友们大家好!"
 }
 
+```
 响应
 
+```
 {
   "data":{
     "content":"房间里的朋友们大家好!",
@@ -381,22 +430,27 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
   "state":2000,
   "type":12
 }
+```
 
 ### 退出房间
 请求
 
+```
 {
   "command":13,
   "room_id":2
 }
 
+```
 响应
 
+```
 {
   "message":"success",
   "state":2000,
   "type":13
 }
+```
 
 ## 主要配置文件说明
 ### application.yml
