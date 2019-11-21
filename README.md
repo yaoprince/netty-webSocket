@@ -51,7 +51,7 @@ Spring Boot 整合Netty,各种依赖注入.具体使用技术如下
 		- Executor 命令执行抽象类 (包含一个执行抽象方法,和一个命令属性)
 		- ChatExecutor 聊天执行基础类(作用是 相关服务层可以在此类中注入,) 
 	- handle netty程序相关的业务在此包中
-	- notice 通知相关业务在此包中
+	- notice 通知推送相关业务在此包中
 	- response 聊天信息响应重用类包
 	- BaseHadnler 聊天基础处理类(包含三个方法,发送单聊消息,发送群聊消息(也可以发送房间聊天消息),断开连接)
 	- NettyServer NettyServer服务器类
